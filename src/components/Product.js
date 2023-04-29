@@ -2,19 +2,17 @@ import Link from "next/link"
 const Product = ({ product }) => {
     return (
         <div className="card">
-            <Link href="{`/product/${product.slug}`}">
-                <span>
+            <Link href={`/product/${product.slug}`}>                
                     <img src={product.image} alt={product.name}
-                        className="rounded shadow" />
-                </span>
+                        className="rounded shadow" width="300px" />
             </Link>
             <div className="flex flex-col items-center justify-center p-5">
-                <Link href="{`/product/${product.slug}`}">
-                    <span>
+                <Link href={`/product/${product.slug}`}>
+                
                         <h2 className="text-lg">
                             {product.name}
                         </h2>
-                    </span>
+                    
                 </Link>
                 <p className="mb-2">
                     {product.brand}
