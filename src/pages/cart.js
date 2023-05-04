@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {CiSquareRemove} from "react-icons/ci";
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
 
 const CartScreen = () => {
   const router=useRouter();
@@ -92,7 +93,7 @@ const CartScreen = () => {
                     </div>
                   </li>
                   <li>
-                    <button onClick={()=>router.push('/shipping')} className="primary-button w-full">
+                    <button onClick={()=>router.push('login?redirect=/shipping')} className="primary-button w-full">
                        check Out
                     </button>
                   </li>
@@ -104,4 +105,4 @@ const CartScreen = () => {
     </Layout>
   )
 }
-export default CartScreen
+export default dynamic (()=>Promise.resolve(CartScreen),{ssr:false})
