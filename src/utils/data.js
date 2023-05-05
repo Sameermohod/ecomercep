@@ -30,7 +30,7 @@ const data = {
             description: 'A popular shirt',
         },
         {
-            name: 'free shirt',
+            name: 'tee shirt',
             slug: 'tee-shirt',
             category: "Shirts",
             image: "/images/hoodie6.jpg",
@@ -79,7 +79,7 @@ const data = {
             description: 'A popular shirt',
         },
         {
-            name: 'jeans pant',
+            name: 'formal pant',
             slug: 'formal-pant',
             category: "Pants",
             image: "/images/hoodie6.jpg",

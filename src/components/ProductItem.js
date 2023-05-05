@@ -1,5 +1,5 @@
 import Link from "next/link"
-const Product = ({ product }) => {
+const ProductItem = ({ product,addToCartHandler }) => {
     return (
         <div className="card">
             <Link href={`/product/${product.slug}`}>                
@@ -20,11 +20,12 @@ const Product = ({ product }) => {
                 <p>
                     ${product.price}
                 </p>
-                <button className="primary-button" type="button">
+                <button className="primary-button" type="button"
+                onClick={()=>addToCartHandler(product)}>
                     Add to cart
                 </button>
             </div>
         </div>
     )
 }
-export default Product
+export default ProductItem
